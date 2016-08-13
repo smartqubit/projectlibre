@@ -2588,7 +2588,7 @@ protected boolean loadLocalDocument(String fileName,boolean merge){ //uses serve
 
 		//accelerators
 		    addCtrlAccel(KeyEvent.VK_G, ACTION_GOTO, null);
-		    addCtrlAccel(KeyEvent.VK_L, ACTION_GOTO, null);
+		    addCtrlAccel(KeyEvent.VK_L, ACTION_LINK, null);
 		    addCtrlAccel(KeyEvent.VK_F, ACTION_FIND, null);
 		    addCtrlAccel(KeyEvent.VK_Z, ACTION_UNDO, null);			//- Sanhita
 		    addCtrlAccel(KeyEvent.VK_Y, ACTION_REDO, null);
@@ -2597,14 +2597,20 @@ protected boolean loadLocalDocument(String fileName,boolean merge){ //uses serve
 		    addCtrlAccel(KeyEvent.VK_S, ACTION_SAVE_PROJECT, null);
 		    addCtrlAccel(KeyEvent.VK_P, ACTION_PRINT, null);			//-Sanhita
 		    addCtrlAccel(KeyEvent.VK_I, ACTION_INSERT_TASK, null);
+
+		    // Indentation
 		    addCtrlAccel(KeyEvent.VK_PERIOD, ACTION_INDENT, null);
 		    addCtrlAccel(KeyEvent.VK_COMMA, ACTION_OUTDENT, null);
+		    addCtrlAccel(KeyEvent.VK_LEFT, ACTION_OUTDENT, null);
+		    addCtrlAccel(KeyEvent.VK_RIGHT, ACTION_INDENT, null);
+
+		    // Expand / Collapse 
 		    addCtrlAccel(KeyEvent.VK_PLUS, ACTION_EXPAND, new ExpandAction());
 		    addCtrlAccel(KeyEvent.VK_ADD, ACTION_EXPAND, new ExpandAction());
 		    addCtrlAccel(KeyEvent.VK_EQUALS, ACTION_EXPAND, new ExpandAction());
 		    addCtrlAccel(KeyEvent.VK_MINUS, ACTION_COLLAPSE, new CollapseAction());
 		    addCtrlAccel(KeyEvent.VK_SUBTRACT, ACTION_COLLAPSE, new CollapseAction());
-
+		    
 			// To force a recalculation. This normally shouldn't be needed.
 		    addCtrlAccel(KeyEvent.VK_R, ACTION_RECALCULATE, new RecalculateAction());
     }
