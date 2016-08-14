@@ -71,7 +71,7 @@ public class GeneralOption {
 	private double defaultStandardRate = 0.0D;
 	private double defaultOvertimeRate = 0.0D;
 	private boolean startWithBlankProject = false;
-	private boolean confirmDeletes = false;
+	private boolean confirmDeletes = true;
 
 	/**
 	 * @return Returns the automaticallyAddNewResourcesAndTasks.
