@@ -1,6 +1,6 @@
 # projectlibral
 
-A for of ProjectLibre that focuses on User Experience and has a faster pace
+A fork of ProjectLibre that focuses on User Experience and has a faster pace
 
 ![ProjectLibre_Gantt_Chart_Ribbon_UI](http://a.fsdn.com/con/app/proj/projectlibre/screenshots/ProjectLibre_Gantt.jpeg)
 
