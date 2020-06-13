@@ -455,6 +455,24 @@ public class SpreadSheet extends CommonSpreadSheet implements Cloneable {
 					GraphicManager.getInstance().doFind(SpreadSheet.this,null);
 				else if (e.getKeyCode() == KeyEvent.VK_F && e.getModifiers()== KeyEvent.CTRL_MASK)
 					GraphicManager.getInstance().doFind(SpreadSheet.this,null);
+				// ALT + Right = Indent right
+				else if (e.getKeyCode() == KeyEvent.VK_RIGHT && 
+						(e.getModifiersEx() & KeyEvent.ALT_DOWN_MASK) != 0)
+				{
+				   executeAction(MenuActionConstants.ACTION_INDENT);
+				}
+				// ALT + Left = Indent left
+				else if (e.getKeyCode() == KeyEvent.VK_LEFT && 
+				        (e.getModifiersEx() & KeyEvent.ALT_DOWN_MASK) != 0)
+				{
+				   executeAction(MenuActionConstants.ACTION_OUTDENT);
+				}
+				// CTRL + L = Link Selected items
+				else if (e.getKeyCode() == KeyEvent.VK_L && 
+				        (e.getModifiersEx() & KeyEvent.ALT_DOWN_MASK) != 0)
+				{
+				   executeAction(MenuActionConstants.ACTION_LINK);
+				}
 
 
 			}
