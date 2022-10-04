@@ -10,3 +10,9 @@ openproj_contrib/openproj-contrib.jar
 openproj_contrib/openproj-reports.jar
 openproj_contrib/openproj-script.jar
 openproj_contrib/tmp/
+
+# IntelliJ Files & Directories
+.idea/
+out/
+.settings/
+*.iml
