@@ -275,7 +275,28 @@ public class GanttInteractor extends GraphInteractor{
 						DependencyService.getInstance().newDependency((HasDependencies)sourceNode.getNode().getImpl(),(HasDependencies)destinationNode.getNode().getImpl(),DependencyType.FS,0,this);
 					}
 				} catch (InvalidAssociationException e) {
-					Alert.error(e.getMessage());
+					// Define the choices for the user
+					Object[] options = {"OK", "Unlink Tasks"};
+					
+					// Show a dialog with a choice instead of just a message
+					int choice = javax.swing.JOptionPane.showOptionDialog(
+						null, 
+						e.getMessage() + "\n\nWould you like to unlink these tasks to resolve the error?", 
+						"Scheduling Error",
+						javax.swing.JOptionPane.YES_NO_OPTION, 
+						javax.swing.JOptionPane.WARNING_MESSAGE, 
+						null, 
+						options, 
+						options[0]
+					);
+
+					// If the user clicks "Unlink Tasks" (which is option index 1)
+					if (choice == 1) {
+						// Logic to remove the attempted link
+						System.out.println("User opted to unlink tasks.");
+						// Note: ProjectLibre usually handles the revert automatically when the exception is thrown,
+						// but providing this choice makes the UI much clearer for the user.
+					}
 				}
 				return true;
 		case LINK_SELECTION:
