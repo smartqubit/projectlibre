@@ -44,8 +44,8 @@
 					classpathref="compile.class.path"
 					debug="off"
 					nowarn="on"
-					source="1.5"
-					target="1.5">
+					source="8"
+					target="8" encoding="ISO-8859-1">
 						<src path="${src_pl_core}" />
 						<src path="${src_core}" />
 						<src path="${src_ui}" />
@@ -63,8 +63,8 @@
 					classpathref="compile-no_contrib_built.class.path"
 					debug="off"
 					nowarn="on"
-					source="1.5"
-					target="1.5">
+					source="8"
+					target="8" encoding="ISO-8859-1">
 						<src path="${src_pl_core}" />
 						<src path="${src_core}" />
 						<src path="${src_ui}" />

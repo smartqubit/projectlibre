@@ -106,7 +106,7 @@ public abstract class GraphInteractor implements MouseListener, MouseMotionListe
 	protected void init(){
     	ui.getGraph().addMouseListener(this);
     	ui.getGraph().addMouseMotionListener(this);
-    	ui.getGraph().addMouseWheelListener(this);
+    	
     	defaultCursor=getGraph().getCursor();
     }
 
